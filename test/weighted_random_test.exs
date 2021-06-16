@@ -28,6 +28,6 @@ defmodule WeightedRandomTest do
 
     count_of_A = random_list |> Enum.count(fn x -> x == :A end)
     percentage = (count_of_A * 100 / 1000) |> round
-    assert percentage in 0..10
+    assert percentage in 9..10
   end
 end
