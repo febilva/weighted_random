@@ -13,8 +13,6 @@ defmodule WeightedRandomTest do
       1..10_000_00
       |> Enum.map(fn x -> WeightedRandom.weight_based_choice(items) end)
 
-    # |> IO.inspect()
-
     banana_count = random_list |> Enum.count(fn x -> x == :bananas end)
     percentage = (banana_count * 100 / 10_000_00) |> round
 
